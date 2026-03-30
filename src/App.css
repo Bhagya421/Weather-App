@@ -1,36 +1,31 @@
 body{
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(to right, #e4dad1, #f8a686);
-
 }
-
 h1{
   margin-bottom: 25px;
 }
-
 input{
   font-size: 15px;
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
   background-color:#fdfbfa ;
+  width: 250px;
 }
-/* input:focus{
-  outline: none;
-} */
-
 button{
-  padding: 6px 10px;
+  padding: 7px 14px;
   background-color:rgb(229, 226, 234) ;
   color: rgb(0, 0, 0);
   margin-top: 5px;
   cursor: pointer;
+  border-radius: 5px;
+  font-style: italic;
 }
 button:hover{
   background-color:rgb(207, 203, 214);
 }
-
 #box{
   margin-top:20px;
   background:rgb(235, 234, 231);
@@ -40,3 +35,14 @@ button:hover{
   border-radius:12px;
   box-shadow: 0px 5px 15px rgba(2, 2, 2, 0.2);
 }
+#box h3{
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+}
+#box p{
+  font-size: 18px;
+  margin-bottom: 8px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
