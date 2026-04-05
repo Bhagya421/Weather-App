@@ -1,0 +1,28 @@
+#favbox{
+  background-color: rgb(237, 231, 231);
+  width: 320px;
+  padding: 25px;
+  margin: 20px auto;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
+
+#favbox p{
+    margin-top: 20px;
+}
+
+#favbox ul{
+  list-style: none;
+  padding: 0;
+}
+
+#favbox li{
+  font-size: 18px;
+  margin: 8px 0;
+  color: rgb(66, 66, 66);
+}
+
+#favbox button{
+  margin-top: 15px;
+}
