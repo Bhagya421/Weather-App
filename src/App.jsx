@@ -15,6 +15,13 @@ function App() {
 
   //getweather fn to fetch data from api triggers when search btn is clicked
   function getWeather(){
+    
+    //if user click search button without entering any value and alert message pops up
+    if(city.trim() === ""){
+      alert("Please enter a city name");
+      return;
+    }
+    
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=b9f2c6da6952aab94c69bd3bf25f38a9&units=metric`)
     .then((res) => res.json())
     .then((data) =>{
