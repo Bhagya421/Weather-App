@@ -19,6 +19,7 @@ function App() {
     //if user click search button without entering any value and alert message pops up
     if(city.trim() === ""){
       alert("Please enter a city name");
+      console.log("Empty string")
       return;
     }
     
