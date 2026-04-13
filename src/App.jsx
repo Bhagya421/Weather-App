@@ -45,6 +45,10 @@ function App() {
   const addToFav = (city) =>{
       if(!favcity.includes(city)){ //checks whether the ciy is already in array
         setFavCity([...favcity,city]); //if not then the city is added to the existing array
+        alert(city + " is added to Favorites City List");
+      }
+      else{
+        alert(city + " is already in Favorites City List");
       }
   }
 
@@ -63,37 +67,44 @@ function App() {
   
   return (
     <>
+    <div className="container">
 
-    <div id='head'>
+      <div className='card weather-card'>
 
-      {/* heading */}
-      <h1>Weather App</h1>
+        <div id='head'>
 
-      {/* input box that stores city as value onchange used to update city value using setcity  */}
-      <input type="text" placeholder='Enter City Name' value={city} onChange={e => setCity(e.target.value)}/>
+            {/* heading */}
+            <h1 className="app-title"><i className="bi bi-cloud-sun-fill title-icon"></i> Weather App</h1>
 
-      <br />
+            <div className='search-box'>
 
-      {/* search button */}
-      <button onClick={getWeather}>Search</button>
+              {/* input box that stores city as value onchange used to update city value using setcity  */}
+              <input type="text" placeholder='Enter City Name' value={city} onChange={e => setCity(e.target.value)}/>
 
-    </div>
+              {/* search button */}
+              <button onClick={getWeather}> <i className="bi bi-search"></i> Search</button>
 
-    {/* if weather has data the weatherbox is triggered with props as data, closeboxfn, addtofav fn */}
-    {weather && (
-      <WeatherBox weather={weather} closeBox = {closeBox} addtofav={addToFav}/>
-    )} 
+            </div>
 
-    {/* if weather has no data and weather box is not displayed then at this stage if favcity btn is clicked it triggers favcitybox */}
-    {!weather && (
-      <button onClick={favCitybtn}>Favorite Cities</button>
-    )}    
+      {/* if weather has data the weatherbox is triggered with props as data, closeboxfn, addtofav fn */}
+      {weather && (
+        <WeatherBox weather={weather} closeBox = {closeBox} addtofav={addToFav}/>
+      )} 
 
-    {/* Favcitybox is triggered if fav is true (favcity btn is clicked) and weather has no data and weather box is not displayed */}
-    {fav && !weather && (
-      <FavcityBox favcity={favcity} closefavcity={closefavcity} />
-    )}
+      {/* if weather has no data and weather box is not displayed then at this stage if favcity btn is clicked it triggers favcitybox */}
+      {!weather && !fav && (
+        <button className='fav-btn' onClick={favCitybtn}> <i className="bi bi-heart"></i> Favorite Cities</button>
+      )}    
 
+      {/* Favcitybox is triggered if fav is true (favcity btn is clicked) and weather has no data and weather box is not displayed */}
+      {fav && !weather && (
+        <FavcityBox favcity={favcity} closefavcity={closefavcity} />
+      )}
+        </div>
+        
+      </div>
+
+  </div>
   </>
   )
 }

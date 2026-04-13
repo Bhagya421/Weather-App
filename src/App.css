@@ -1,35 +1,88 @@
 body{
-  text-align: center;
+  margin:0;
   font-family: 'Times New Roman', Times, serif;
   background: linear-gradient(to right, #e4dad1, #f8a686);
+  /* center the card */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+
 }
 
-h1{
-  margin: 25px;
+.container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* MAIN CARD */
+.weather-card{
+  width:600px;
+  border-radius:15px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.15);
+  background:white;
+  padding:40px;
+  text-align:center;
+}
+
+/* TITLE */
+.app-title{
+  font-size: 32px;
+  font-weight: bold;
+  color: #363636;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.title-icon{
+  color: #f39c12;
+  font-size: 30px;
+}
+
+/* SEARCH AREA */
+.search-box{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:20px;
 }
 
 input{
-  font-size: 15px;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  background-color:#fdfbfa ;
+  width:70%;
+  padding:8px;
+  border-radius:8px;
   border:1px solid #ccc;
-  width: 250px;
+
 }
 
 button{
-  padding: 7px 14px;
-  background-color:rgb(229, 226, 234) ;
-  color: rgb(0, 0, 0);
-  margin-top: 5px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-style: italic;
-  
+  padding:10px 15px !important;
+  border:none;
+  border-radius:8px;
+  background:#f58c6c !important;
+  color:white !important;
 }
 
 button:hover{
-  background-color:rgb(207, 203, 214);
+  background:#f2704f !important;
 }
 
+/* FAVORITE BUTTON */
+.fav-btn{
+  margin-top: 15px;
+}
+
+/* WEATHER BOX */
+
+
+/* CITY NAME */
+
+
+/* WEATHER DETAILS */
+
+
+/* ICONS */

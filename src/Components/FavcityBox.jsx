@@ -4,9 +4,9 @@ import './FavcityBox.css'
 function FavcityBox({favcity, closefavcity}) {
 
   return (
-    <div id='favbox'>
+    <div className='fav-city-card'>
         {/* Heading with bootstrap heart icon and added color */}
-        <h3>Favorite Cities <i className="bi bi-heart-fill text-danger"></i> </h3>
+        <h3>Favorite Cities <i className="bi bi-heart-fill text-danger heart"></i> </h3>
 
         {/* Ternary operator is used. p tag is displayed if rray is empty else the list of city is showed using map method where each city is deisplayed from favcity array using index */}
         {favcity.length === 0 ? (

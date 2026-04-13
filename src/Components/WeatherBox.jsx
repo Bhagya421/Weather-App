@@ -39,21 +39,21 @@ function WeatherBox({weather, closeBox, addtofav}) {
 
   return (
     <div>
-        <div id='box'>
+        <div className='weather-box'>
             {/* City name */}
-            <h3><i class="bi bi-geo-alt-fill text-danger"></i> {weather.name}</h3>
+            <h3 className='city-name'><i class="bi bi-geo-alt-fill text-danger"></i> {weather.name}</h3>
 
             {/* shows the Decription of the weather and using i tag the icon is displayed, where in icon, the color is also mentioned */}
-            <p ><i className={icon} ></i>  {weather.weather[0].description}</p>
+            <p className='weather-row'><i className={icon} ></i>  {weather.weather[0].description}</p>
 
             {/*  shows temperature of the particular city and icon is added using bootstrap with color */}
-            <p><i class="bi bi-thermometer-half text-danger"></i> Temperature : {weather.main.temp}  </p>
+            <p className='weather-row'><i class="bi bi-thermometer-half text-danger"></i> Temperature : {weather.main.temp}  </p>
 
             {/* shows humidity of the particular city and icon is added using bootstrap with color */}
-            <p><i className="bi bi-droplet text-primary"></i> humidity : {weather.main.humidity} %</p>
+            <p className='weather-row'><i className="bi bi-droplet text-primary"></i> humidity : {weather.main.humidity} %</p>
 
             {/* shows wind speed of the particular city and icon is added using bootstrap with color */}
-            <p> <i class="bi bi-wind text-info"></i> Wind speed : {weather.wind.speed} m/s </p>
+            <p className='weather-row'> <i class="bi bi-wind text-info"></i> Wind speed : {weather.wind.speed} m/s </p>
 
             {/* when this btn is clicked addtofav fn is triggered where it adds the city to the array of fav city */}
             <button onClick={()=>{addtofav(weather.name)}}>Add to Favorites</button>
